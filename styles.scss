@@ -17,18 +17,6 @@ $Very-light-red-1: hsl(13, 100%, 72%);
 $Very-dark-gray-blue: hsl(237, 17%, 21%);
 $Very-dark-desaturated-blue: hsl(237, 23%, 32%);
 
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    border: none;
-    outline: none;
-    text-decoration: none;
-    box-sizing: border-box;
-}
-
 @mixin keyframes($animation-name) {
     @keyframes #{$animation-name} {
         @content;
@@ -59,26 +47,41 @@ $Very-dark-desaturated-blue: hsl(237, 23%, 32%);
     }
 }
 
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0;
+
     .header_wrapper {
         background-image: url("images/bg-pattern-intro-desktop.svg"),
-            linear-gradient(150deg, $Very-light-red-1, $Light-red);
+            linear-gradient(130deg, $Very-light-red-1 50%, $Light-red);
         background-position: 25.3% 52.2%; // x%, y%
         background-repeat: no-repeat;
-        background-size: fill;
+        background-size: auto;
         min-height: 66.6dvh;
-        min-width: 100dvw;
+        padding-inline: 10.25rem;
         border-bottom-left-radius: 6.2rem;
         font-family: "Ubuntu", sans-serif;
 
         .header__nav {
             display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            padding-inline: 10.4rem;
-            padding-block: 3.9rem;
-            width: 100%;
+            align-items: center;
+            padding-block: 3.95rem;
             column-gap: 4rem;
+
+            .header_logo {
+                width: 7.65rem;
+            }
 
             .sub_header_nav {
                 display: flex;
@@ -182,14 +185,13 @@ body {
                     display: flex;
                     justify-content: flex-end;
                     align-items: flex-start;
-                    margin-top: -0.4rem;
-                    margin-right: -0.3rem;
+                    margin-top: -0.3rem;
                     font-family: "Ubuntu", sans-serif;
 
                     .header_button-login {
                         background-color: transparent;
                         color: $White;
-                        padding: 1rem 2rem;
+                        padding: 1rem 1.8rem;
                         font-size: 1rem;
                         font-weight: 700;
 
@@ -217,6 +219,10 @@ body {
                     }
                 }
             }
+
+            .hamburger_menu {
+                display: none;
+            }
         }
 
         .header_intro_wrapper {
@@ -224,9 +230,9 @@ body {
             color: $White;
 
             .header_intro {
-                margin-top: 4rem;
+                margin-top: 3.8rem;
                 text-align: center;
-                font-size: 3.75rem;
+                font-size: 3.76rem;
                 font-weight: 500;
                 letter-spacing: -0.019rem;
             }
@@ -234,7 +240,7 @@ body {
             .sub_header_intro {
                 margin-top: 1rem;
                 text-align: center;
-                font-size: 1.06rem;
+                font-size: 1.23rem;
             }
         }
 
@@ -287,42 +293,77 @@ body {
 
     .main_wrapper {
         font-family: "Overpass", sans-serif;
-        padding-block: 9.7rem;
         background-image: url("images/illustration-editor-desktop.svg");
+        background-position: 153.3% 13.5%;
         background-repeat: no-repeat;
         background-size: auto;
-        background-position: 153.5% 70%;
 
-        .main_wrapper-title {
+        .first_title {
             text-align: center;
             font-size: 2.34rem;
             font-weight: 500;
             letter-spacing: -0.009rem;
+            padding-block-start: 9.7rem;
             color: $Very-dark-gray-blue;
         }
 
-        .main_wrapper-content {
-            .main_wrapper-description_wrapper {
-                padding-inline: 10.4rem;
-                padding-block-start: 6.5rem;
+        .first_description_wrapper_detail {
+            padding-top: 6.5rem;
+            padding-inline-start: 10.3rem;
 
-                .description_wrapper-detail {
-                    margin-bottom: 4.8rem;
-
-                    .description_title {
-                        font-size: 1.74rem;
-                        font-weight: 500;
-                        color: $Very-dark-gray-blue;
-                    }
-
-                    .description_content {
-                        padding-top: 1.68rem;
-                        font-size: 0.88rem;
-                        line-height: 1.62;
-                        max-width: 534px;
-                        color: hsla(206, 13%, 34%, 0.719);
-                    }
+            .first_description_detail {
+                .first_description_title {
+                    font-size: 1.74rem;
+                    font-weight: 500;
+                    color: $Very-dark-gray-blue;
                 }
+
+                .first_description_content {
+                    padding-top: 1.68rem;
+                    font-size: 0.88rem;
+                    line-height: 1.62;
+                    max-width: 534px;
+                    color: hsla(206, 13%, 34%, 0.719);
+                    margin-bottom: 4.8rem;
+                }
+            }
+        }
+
+        .main_wrapper-description_state_of_art_wrapper {
+            margin-block-start: 16rem;
+            background-color: $Very-dark-blue;
+            background-image: url("images/bg-pattern-circles.svg");
+            background-size: 70% auto;
+            background-repeat: no-repeat;
+            background-position: -49% 82%;
+            border-top-right-radius: 6.3rem;
+            border-bottom-left-radius: 6.3rem;
+            min-height: 44.5dvh;
+            position: relative;
+
+            .description_state_of_art_wrapper-detail {
+                margin-inline-start: 46rem;
+                padding-block-start: 7.3rem;
+                color: $White;
+                max-width: 570px;
+
+                .description_state_of_art {
+                    font-size: 2.33rem;
+                    font-weight: 500;
+                }
+
+                .description_state_of_art_content {
+                    padding-block-start: 1.4rem;
+                    font-size: 1.055rem;
+                    line-height: 1.6;
+                    width: 550px;
+                }
+            }
+
+            .illustration-phones-img {
+                position: absolute;
+                top: -4.25rem;
+                left: 7.8rem;
             }
         }
     }
@@ -337,15 +378,19 @@ body {
             }
         }
     }
+}
 
-    // Media Query
-    @media (max-width: 1200.98px) {
+// Media Query
+@media (max-width: 1200.98px) {
+    body {
         .header_wrapper {
             padding-inline: 5rem;
         }
     }
+}
 
-    @media (max-width: 950.98px) {
+@media (max-width: 950.98px) {
+    body {
         .header_wrapper {
             padding-inline: 3.5rem;
 
@@ -355,6 +400,189 @@ body {
                 align-items: flex-start;
                 width: 100%;
                 column-gap: 3rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 810.98px) {
+    body {
+        .header_wrapper {
+            padding-inline: 3.5rem;
+
+            .header__nav {
+                .header_logo {
+                    width: 9rem;
+                }
+
+                .sub_header_nav {
+                    .header_nav_wrapper {
+                        display: none;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        padding-top: 0.8rem;
+                        font-weight: 700;
+                        font-size: 1rem;
+                        gap: 2rem;
+                        color: $White;
+
+                        .header_dropdown_product,
+                        .header_dropdown_company,
+                        .header_dropdown_connect {
+                            .header_dropdown_product_content,
+                            .header_dropdown_company_content,
+                            .header_dropdown_connect_content {
+                                position: absolute;
+                                top: auto;
+                                opacity: 0;
+                                cursor: pointer;
+                                background-color: $White;
+                                margin-top: 0.7rem;
+                                width: 190px;
+                                padding-inline: 3rem;
+                                padding-block: 1.5rem;
+                                border-radius: 0.5rem;
+                                transition: 0.3s linear;
+                            }
+                        }
+
+                        .dropdown_label_wrapper {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: baseline;
+
+                            .dropdown_category {
+                                padding-right: 0.4rem;
+                                cursor: pointer;
+                                background-color: transparent;
+                                color: $White;
+                                font-weight: 700;
+                                font-size: 1rem;
+
+                                &::after {
+                                    content: "";
+                                    display: block;
+                                    border-bottom: 2px solid $White;
+                                    transform: scaleX(0);
+                                    transform-origin: left;
+                                    transition: 0.2s linear;
+                                }
+                            }
+
+                            .dropdown_arrow_sign {
+                                .arrow_color {
+                                    path {
+                                        stroke: red;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .header_button {
+                        display: none;
+                        justify-content: flex-end;
+                        align-items: flex-start;
+                        margin-top: -0.3rem;
+                        font-family: "Ubuntu", sans-serif;
+
+                        .header_button-login {
+                            background-color: transparent;
+                            color: $White;
+                            padding: 1rem 1.8rem;
+                            font-size: 1rem;
+                            font-weight: 700;
+                        }
+
+                        .header_button-sign-up {
+                            background-color: $White;
+                            color: $Light-red;
+                            padding: 0.95rem 2.35rem;
+                            border-radius: 25px;
+                            font-size: 1rem;
+                            font-weight: 700;
+                        }
+                    }
+                }
+
+                .hamburger_menu {
+                    display: block;
+                    margin-top: 0.5rem;
+                    width: 2.5rem;
+                    height: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600.98px) {
+    body {
+        .header_wrapper {
+            padding-inline: 3.5rem;
+
+            .header_intro_wrapper {
+                .header_intro {
+                    font-size: 3.2rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 430.98px) {
+    body {
+        .header_wrapper {
+            padding-inline: 2rem;
+
+            .header_intro_wrapper {
+                .header_intro {
+                    font-size: 2.2rem;
+                }
+
+                .sub_header_intro {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 375.98px) {
+    body {
+        .header_wrapper {
+            padding-inline: 2rem;
+
+            .header__nav {
+                .header_logo {
+                    width: 6rem;
+                }
+
+                .hamburger_menu {
+                    width: 2rem;
+                    height: 1.2rem;
+                }
+            }
+
+            .header_intro_wrapper {
+                .header_intro {
+                    margin-top: 0;
+                    font-size: 2rem;
+                }
+            }
+
+            .header_button_intro {
+                margin-top: 2.2rem;
+
+                .button_intro_left {
+                    padding: 0.7rem 1.7rem;
+                    font-size: 0.8rem;
+                }
+
+                .button_intro_right {
+                    padding: 0.7rem 1.7rem;
+                    font-size: 0.8rem;
+                }
             }
         }
     }
