@@ -9,6 +9,8 @@ const companyContent = document.querySelector(
 const connectContent = document.querySelector(
     ".header_dropdown_connect_content"
 );
+const hamburgerMenu = document.querySelector(".hamburger_menu");
+const closeMenu = document.querySelector(".close_menu");
 
 arrowText[0].addEventListener("click", () => {
     productContent.classList.toggle("active");
@@ -55,4 +57,11 @@ document.addEventListener("click", (e) => {
         connectContent.classList.remove("active");
         arrowSign[2].classList.remove("rotate");
     }
+});
+
+[hamburgerMenu, closeMenu].forEach((els) => {
+    els.addEventListener("click", () => {
+        hamburgerMenu.classList.toggle("active");
+        closeMenu.classList.toggle("active");
+    });
 });

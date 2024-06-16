@@ -223,6 +223,10 @@ body {
             .hamburger_menu {
                 display: none;
             }
+
+            .close_menu {
+                display: none;
+            }
         }
 
         .header_intro_wrapper {
@@ -507,9 +511,25 @@ body {
 
                 .hamburger_menu {
                     display: block;
+                    opacity: 1;
                     margin-top: 0.5rem;
                     width: 2.5rem;
                     height: 1.5rem;
+
+                    &.active {
+                        display: none;
+                    }
+                }
+
+                .close_menu {
+                    display: none;
+                    margin-top: 0.2rem;
+                    width: 2.5rem;
+                    height: 1.5rem;
+
+                    &.active {
+                        display: block;
+                    }
                 }
             }
         }
@@ -561,6 +581,11 @@ body {
                 .hamburger_menu {
                     width: 2rem;
                     height: 1.2rem;
+                }
+
+                .close_menu {
+                    width: 2rem;
+                    height: 1.8rem;
                 }
             }
 

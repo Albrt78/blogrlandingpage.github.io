@@ -199,6 +199,9 @@ body .header_wrapper .header__nav .sub_header_nav .header_button .header_button-
 body .header_wrapper .header__nav .hamburger_menu {
   display: none;
 }
+body .header_wrapper .header__nav .close_menu {
+  display: none;
+}
 body .header_wrapper .header_intro_wrapper {
   font-family: "Overpass", sans-serif;
   color: hsl(0, 0%, 100%);
@@ -431,9 +434,22 @@ body .footer_wrapper .attribution a {
   }
   body .header_wrapper .header__nav .hamburger_menu {
     display: block;
+    opacity: 1;
     margin-top: 0.5rem;
     width: 2.5rem;
     height: 1.5rem;
+  }
+  body .header_wrapper .header__nav .hamburger_menu.active {
+    display: none;
+  }
+  body .header_wrapper .header__nav .close_menu {
+    display: none;
+    margin-top: 0.2rem;
+    width: 2.5rem;
+    height: 1.5rem;
+  }
+  body .header_wrapper .header__nav .close_menu.active {
+    display: block;
   }
 }
 @media (max-width: 600.98px) {
@@ -465,6 +481,10 @@ body .footer_wrapper .attribution a {
   body .header_wrapper .header__nav .hamburger_menu {
     width: 2rem;
     height: 1.2rem;
+  }
+  body .header_wrapper .header__nav .close_menu {
+    width: 2rem;
+    height: 1.8rem;
   }
   body .header_wrapper .header_intro_wrapper .header_intro {
     margin-top: 0;
