@@ -68,7 +68,7 @@ body {
         background-position: 25.3% 52.2%; // x%, y%
         background-repeat: no-repeat;
         background-size: auto;
-        min-height: 66.6dvh;
+        min-height: 66.8dvh;
         padding-inline: 10.25rem;
         border-bottom-left-radius: 6.2rem;
         font-family: "Ubuntu", sans-serif;
@@ -76,145 +76,151 @@ body {
         .header__nav {
             display: flex;
             align-items: center;
-            padding-block: 3.95rem;
+            padding-block: 4.8rem;
             column-gap: 4rem;
 
             .header_logo {
                 width: 7.65rem;
+                margin-top: -1.05rem;
             }
 
             .sub_header_nav {
                 display: flex;
-                justify-content: space-between;
                 align-items: flex-start;
+                justify-content: flex-start;
                 width: 100%;
 
                 .header_nav_wrapper {
                     display: flex;
+                    justify-content: space-between;
                     align-items: flex-start;
-                    justify-content: flex-start;
-                    padding-top: 0.8rem;
-                    font-weight: 700;
-                    font-size: 1rem;
-                    gap: 2rem;
-                    color: $White;
+                    width: 100%;
 
-                    .header_dropdown_product,
-                    .header_dropdown_company,
-                    .header_dropdown_connect {
-                        .header_dropdown_product_content,
-                        .header_dropdown_company_content,
-                        .header_dropdown_connect_content {
-                            position: absolute;
-                            top: auto;
-                            opacity: 0;
-                            cursor: pointer;
-                            background-color: $White;
-                            margin-top: 0.7rem;
-                            width: 190px;
-                            padding-inline: 3rem;
-                            padding-block: 1.5rem;
-                            border-radius: 0.5rem;
-                            transition: 0.3s linear;
+                    .navbar {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        gap: 1.9rem;
+                        color: $White;
+                        font-weight: 700;
+                        font-size: 1rem;
 
-                            ul {
-                                li {
-                                    margin-bottom: 0.8rem;
+                        .header_dropdown_product,
+                        .header_dropdown_company,
+                        .header_dropdown_connect {
+                            .content {
+                                position: absolute;
+                                top: auto;
+                                opacity: 0;
+                                cursor: pointer;
+                                background-color: $White;
+                                margin-top: 0.7rem;
+                                width: 190px;
+                                padding-inline: 3rem;
+                                padding-block: 1.5rem;
+                                border-radius: 0.5rem;
+                                transition: 0.3s linear;
 
-                                    a {
-                                        color: $Very-dark-black-blue;
-                                        font-weight: 400;
+                                ul {
+                                    li {
+                                        margin-bottom: 0.8rem;
 
-                                        &:hover {
-                                            font-weight: 700;
+                                        a {
+                                            color: $Very-dark-black-blue;
+                                            font-weight: 400;
+
+                                            &:hover {
+                                                font-weight: 700;
+                                            }
                                         }
+                                    }
+                                }
+
+                                &.active {
+                                    position: absolute;
+                                    top: auto;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+
+                        .dropdown_label_wrapper {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: baseline;
+
+                            .dropdown_category {
+                                padding-right: 0.4rem;
+                                cursor: pointer;
+                                background-color: transparent;
+                                color: $White;
+                                font-weight: 700;
+                                font-size: 1rem;
+
+                                &::after {
+                                    content: "";
+                                    display: block;
+                                    border-bottom: 2px solid $White;
+                                    transform: scaleX(0);
+                                    transform-origin: left;
+                                    transition: 0.2s linear;
+                                }
+
+                                &.active,
+                                &:hover {
+                                    &::after {
+                                        transform: scaleX(1);
                                     }
                                 }
                             }
 
-                            &.active {
-                                position: absolute;
-                                top: auto;
-                                opacity: 1;
-                            }
-                        }
-                    }
+                            .dropdown_arrow_sign {
+                                transition: all 0.2s linear;
+                                background-color: transparent;
 
-                    .dropdown_label_wrapper {
-                        display: flex;
-                        justify-content: flex-start;
-                        align-items: baseline;
-
-                        .dropdown_category {
-                            padding-right: 0.4rem;
-                            cursor: pointer;
-                            background-color: transparent;
-                            color: $White;
-                            font-weight: 700;
-                            font-size: 1rem;
-
-                            &::after {
-                                content: "";
-                                display: block;
-                                border-bottom: 2px solid $White;
-                                transform: scaleX(0);
-                                transform-origin: left;
-                                transition: 0.2s linear;
-                            }
-
-                            &:hover,
-                            &:active {
-                                &::after {
-                                    transform: scaleX(1);
+                                &.rotate {
+                                    transform: rotate(180deg);
                                 }
                             }
                         }
+                    }
 
-                        .dropdown_arrow_sign {
-                            transition: all 0.2s linear;
+                    .header_button {
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-start;
+                        gap: 0.6rem;
+                        margin-top: -0.97rem;
+                        font-family: "Ubuntu", sans-serif;
+
+                        .header_button-login {
                             background-color: transparent;
+                            color: $White;
+                            padding: 1rem 1.4rem;
+                            font-size: 1rem;
+                            font-weight: 700;
 
-                            &.rotate {
-                                transform: rotate(180deg);
+                            &:active {
+                                @include animation("scale-down 0.1s");
                             }
                         }
-                    }
-                }
 
-                .header_button {
-                    display: flex;
-                    justify-content: flex-end;
-                    align-items: flex-start;
-                    margin-top: -0.3rem;
-                    font-family: "Ubuntu", sans-serif;
+                        .header_button-sign-up {
+                            background-color: $White;
+                            color: $Light-red;
+                            padding: 0.95rem 2.3rem;
+                            border-radius: 25px;
+                            font-size: 1rem;
+                            font-weight: 700;
 
-                    .header_button-login {
-                        background-color: transparent;
-                        color: $White;
-                        padding: 1rem 1.8rem;
-                        font-size: 1rem;
-                        font-weight: 700;
+                            &:hover {
+                                background-color: hsla(0, 0%, 100%, 0.251);
+                                color: $White;
+                            }
 
-                        &:active {
-                            @include animation("scale-down 0.1s");
-                        }
-                    }
-
-                    .header_button-sign-up {
-                        background-color: $White;
-                        color: $Light-red;
-                        padding: 0.95rem 2.35rem;
-                        border-radius: 25px;
-                        font-size: 1rem;
-                        font-weight: 700;
-
-                        &:hover {
-                            background-color: hsla(0, 0%, 100%, 0.251);
-                            color: $White;
-                        }
-
-                        &:active {
-                            @include animation("scale-down 0.1s");
+                            &:active {
+                                @include animation("scale-down 0.1s");
+                            }
                         }
                     }
                 }
@@ -234,7 +240,7 @@ body {
             color: $White;
 
             .header_intro {
-                margin-top: 3.8rem;
+                margin-top: 3rem;
                 text-align: center;
                 font-size: 3.76rem;
                 font-weight: 500;
@@ -385,10 +391,25 @@ body {
 }
 
 // Media Query
+@media (max-width: 1280.98px) {
+    body {
+        .header_wrapper {
+            padding-block-end: 5rem;
+
+            .header_intro_wrapper {
+                .header_intro {
+                    margin-top: -0.5rem;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 1200.98px) {
     body {
         .header_wrapper {
             padding-inline: 5rem;
+            min-height: auto;
         }
     }
 }
@@ -397,13 +418,14 @@ body {
     body {
         .header_wrapper {
             padding-inline: 3.5rem;
+            padding-block-end: 3rem;
 
             .header__nav {
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-start;
                 width: 100%;
-                column-gap: 3rem;
+                column-gap: 2rem;
             }
         }
     }
@@ -415,96 +437,116 @@ body {
             padding-inline: 3.5rem;
 
             .header__nav {
+                column-gap: 0;
+
                 .header_logo {
                     width: 9rem;
                 }
 
                 .sub_header_nav {
                     .header_nav_wrapper {
-                        display: none;
-                        align-items: flex-start;
-                        justify-content: flex-start;
-                        padding-top: 0.8rem;
-                        font-weight: 700;
-                        font-size: 1rem;
-                        gap: 2rem;
-                        color: $White;
+                        border-radius: 0.5rem;
+                        flex-direction: column;
+                        background-color: $White;
+                        margin-top: 4rem;
+                        position: absolute;
+                        width: auto;
+                        left: 3.5rem;
+                        right: 3.5rem;
+                        padding-inline: 2rem;
 
-                        .header_dropdown_product,
-                        .header_dropdown_company,
-                        .header_dropdown_connect {
-                            .header_dropdown_product_content,
-                            .header_dropdown_company_content,
-                            .header_dropdown_connect_content {
-                                position: absolute;
-                                top: auto;
-                                opacity: 0;
-                                cursor: pointer;
-                                background-color: $White;
-                                margin-top: 0.7rem;
-                                width: 190px;
-                                padding-inline: 3rem;
-                                padding-block: 1.5rem;
-                                border-radius: 0.5rem;
-                                transition: 0.3s linear;
-                            }
-                        }
+                        .navbar {
+                            display: block;
+                            height: auto;
+                            width: 100%;
+                            padding-inline: 2rem;
+                            padding-block-start: 2rem;
+                            color: $Very-dark-desaturated-blue;
 
-                        .dropdown_label_wrapper {
-                            display: flex;
-                            justify-content: flex-start;
-                            align-items: baseline;
+                            .header_dropdown_product,
+                            .header_dropdown_company,
+                            .header_dropdown_connect {
+                                .content {
+                                    position: relative;
+                                    top: auto;
+                                    left: auto;
+                                    right: auto;
+                                    display: none;
+                                    text-align: center;
+                                    background-color: rgb(244, 226, 226);
+                                    margin-top: -1rem;
+                                    padding-top: 3rem;
+                                    width: auto;
 
-                            .dropdown_category {
-                                padding-right: 0.4rem;
-                                cursor: pointer;
-                                background-color: transparent;
-                                color: $White;
-                                font-weight: 700;
-                                font-size: 1rem;
+                                    ul {
+                                        li {
+                                            padding-bottom: 1rem;
 
-                                &::after {
-                                    content: "";
-                                    display: block;
-                                    border-bottom: 2px solid $White;
-                                    transform: scaleX(0);
-                                    transform-origin: left;
-                                    transition: 0.2s linear;
+                                            a {
+                                                color: $Very-dark-grayish-blue;
+                                                font-size: 1.2rem;
+                                                font-weight: 600;
+                                            }
+                                        }
+                                    }
+
+                                    &.active {
+                                        position: relative;
+                                        display: block;
+                                        margin-bottom: 1rem;
+                                    }
                                 }
                             }
 
-                            .dropdown_arrow_sign {
-                                .arrow_color {
-                                    path {
-                                        stroke: red;
+                            .dropdown_label_wrapper {
+                                justify-content: center;
+
+                                .dropdown_category {
+                                    color: $Very-dark-gray-blue;
+                                    font-size: 1.3rem;
+                                    margin-bottom: 2.3rem;
+
+                                    &::after {
+                                        display: none;
+                                    }
+
+                                    &.active {
+                                        color: $Very-dark-grayish-blue;
+                                    }
+                                }
+
+                                .dropdown_arrow_sign {
+                                    .arrow_color {
+                                        path {
+                                            stroke: red;
+                                        }
                                     }
                                 }
                             }
                         }
-                    }
 
-                    .header_button {
-                        display: none;
-                        justify-content: flex-end;
-                        align-items: flex-start;
-                        margin-top: -0.3rem;
-                        font-family: "Ubuntu", sans-serif;
-
-                        .header_button-login {
-                            background-color: transparent;
-                            color: $White;
-                            padding: 1rem 1.8rem;
-                            font-size: 1rem;
-                            font-weight: 700;
-                        }
-
-                        .header_button-sign-up {
+                        .header_button {
+                            display: block;
+                            width: 100%;
                             background-color: $White;
-                            color: $Light-red;
-                            padding: 0.95rem 2.35rem;
-                            border-radius: 25px;
-                            font-size: 1rem;
-                            font-weight: 700;
+                            padding-block: 2rem;
+                            border-top: 1px solid $Very-dark-desaturated-blue;
+                            text-align: center;
+
+                            .header_button-login {
+                                color: $Very-dark-desaturated-blue;
+                                font-size: 1.3rem;
+                            }
+
+                            .header_button-sign-up {
+                                background: linear-gradient(
+                                    100deg,
+                                    $Very-light-red-1 20%,
+                                    $Light-red
+                                );
+                                color: $White;
+                                font-size: 1.3rem;
+                            }
                         }
                     }
                 }
@@ -525,7 +567,7 @@ body {
                     display: none;
                     margin-top: 0.2rem;
                     width: 2.5rem;
-                    height: 1.5rem;
+                    height: 2.3rem;
 
                     &.active {
                         display: block;

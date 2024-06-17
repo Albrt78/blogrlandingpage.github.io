@@ -1,65 +1,37 @@
 const arrowSign = document.querySelectorAll(".dropdown_arrow_sign");
 const arrowText = document.querySelectorAll(".dropdown_category");
-const productContent = document.querySelector(
-    ".header_dropdown_product_content"
-);
-const companyContent = document.querySelector(
-    ".header_dropdown_company_content"
-);
-const connectContent = document.querySelector(
-    ".header_dropdown_connect_content"
-);
+const content = document.querySelectorAll(".content");
 const hamburgerMenu = document.querySelector(".hamburger_menu");
 const closeMenu = document.querySelector(".close_menu");
 
-arrowText[0].addEventListener("click", () => {
-    productContent.classList.toggle("active");
-    arrowSign[0].classList.toggle("rotate");
-});
+const menu = [hamburgerMenu, closeMenu];
 
-arrowSign[0].addEventListener("click", () => {
-    productContent.classList.toggle("active");
-    arrowSign[0].classList.toggle("rotate");
-});
+for (let i = 0; i < arrowText.length; i++) {
+    arrowText[i].addEventListener("click", () => {
+        content[i].classList.add("active");
+        arrowSign[i].classList.toggle("rotate");
+    });
 
-arrowText[1].addEventListener("click", () => {
-    companyContent.classList.toggle("active");
-    arrowSign[1].classList.toggle("rotate");
-});
+    arrowSign[i].addEventListener("click", () => {
+        content[i].classList.add("active");
+        arrowSign[i].classList.toggle("rotate");
+    });
 
-arrowSign[1].addEventListener("click", () => {
-    companyContent.classList.toggle("active");
-    arrowSign[1].classList.toggle("rotate");
-});
+    document.addEventListener("click", (e) => {
+        if (
+            !arrowText[i].contains(e.target) &&
+            !arrowSign[i].contains(e.target)
+        ) {
+            content[i].classList.remove("active");
+            arrowSign[i].classList.remove("rotate");
+        } else {
+            content[i].classList.add("active");
+            arrowSign[i].classList.add("rotate");
+        }
+    });
+}
 
-arrowText[2].addEventListener("click", () => {
-    connectContent.classList.toggle("active");
-    arrowSign[2].classList.toggle("rotate");
-});
-
-arrowSign[2].addEventListener("click", () => {
-    connectContent.classList.toggle("active");
-    arrowSign[2].classList.toggle("rotate");
-});
-
-document.addEventListener("click", (e) => {
-    if (!arrowText[0].contains(e.target) && !arrowSign[0].contains(e.target)) {
-        productContent.classList.remove("active");
-        arrowSign[0].classList.remove("rotate");
-    }
-
-    if (!arrowText[1].contains(e.target) && !arrowSign[1].contains(e.target)) {
-        companyContent.classList.remove("active");
-        arrowSign[1].classList.remove("rotate");
-    }
-
-    if (!arrowText[2].contains(e.target) && !arrowSign[2].contains(e.target)) {
-        connectContent.classList.remove("active");
-        arrowSign[2].classList.remove("rotate");
-    }
-});
-
-[hamburgerMenu, closeMenu].forEach((els) => {
+menu.forEach((els) => {
     els.addEventListener("click", () => {
         hamburgerMenu.classList.toggle("active");
         closeMenu.classList.toggle("active");
