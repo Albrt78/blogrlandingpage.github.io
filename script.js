@@ -3,6 +3,7 @@ const arrowText = document.querySelectorAll(".dropdown_category");
 const content = document.querySelectorAll(".content");
 const hamburgerMenu = document.querySelector(".hamburger_menu");
 const closeMenu = document.querySelector(".close_menu");
+const mainMenu = document.querySelector(".header_nav_wrapper");
 
 const menu = [hamburgerMenu, closeMenu];
 
@@ -36,4 +37,12 @@ menu.forEach((els) => {
         hamburgerMenu.classList.toggle("active");
         closeMenu.classList.toggle("active");
     });
+});
+
+hamburgerMenu.addEventListener("click", () => {
+    mainMenu.classList.toggle("show_menu");
+});
+
+closeMenu.addEventListener("click", () => {
+    mainMenu.classList.remove("show_menu");
 });

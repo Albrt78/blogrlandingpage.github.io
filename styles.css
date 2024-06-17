@@ -237,7 +237,7 @@ body .header_wrapper .header_button_intro .button_intro_right:active {
 body .main_wrapper {
   font-family: "Overpass", sans-serif;
   background-image: url("images/illustration-editor-desktop.svg");
-  background-position: 153.3% 13.5%;
+  background-position: 153.3% 31.7%;
   background-repeat: no-repeat;
   background-size: auto;
 }
@@ -250,8 +250,12 @@ body .main_wrapper .first_title {
   color: hsl(237, 17%, 21%);
 }
 body .main_wrapper .first_description_wrapper_detail {
+  min-height: 100dvh;
   padding-top: 6.5rem;
   padding-inline-start: 10.3rem;
+}
+body .main_wrapper .first_description_wrapper_detail .first_description_detail {
+  max-width: 540px;
 }
 body .main_wrapper .first_description_wrapper_detail .first_description_detail .first_description_title {
   font-size: 1.74rem;
@@ -259,10 +263,9 @@ body .main_wrapper .first_description_wrapper_detail .first_description_detail .
   color: hsl(237, 17%, 21%);
 }
 body .main_wrapper .first_description_wrapper_detail .first_description_detail .first_description_content {
-  padding-top: 1.68rem;
-  font-size: 0.88rem;
-  line-height: 1.62;
-  max-width: 534px;
+  padding-top: 1.5rem;
+  font-size: 0.89rem;
+  line-height: 1.63;
   color: hsla(206, 13%, 34%, 0.719);
   margin-bottom: 4.8rem;
 }
@@ -314,6 +317,14 @@ body .footer_wrapper .attribution a {
   body .header_wrapper .header_intro_wrapper .header_intro {
     margin-top: -0.5rem;
   }
+  body .main_wrapper {
+    background-position: 150.3% 90.7%;
+    background-size: 70% 85%;
+  }
+  body .main_wrapper .first_description_wrapper_detail {
+    padding-top: 6rem;
+    padding-inline-start: 3.3rem;
+  }
 }
 @media (max-width: 1200.98px) {
   body .header_wrapper {
@@ -324,7 +335,7 @@ body .footer_wrapper .attribution a {
 @media (max-width: 950.98px) {
   body .header_wrapper {
     padding-inline: 3.5rem;
-    padding-block-end: 3rem;
+    padding-block-end: 7rem;
   }
   body .header_wrapper .header__nav {
     display: flex;
@@ -333,6 +344,16 @@ body .footer_wrapper .attribution a {
     width: 100%;
     -moz-column-gap: 2rem;
          column-gap: 2rem;
+  }
+  body .main_wrapper {
+    background-position: 150.3% 25.7%;
+    background-size: 70% 45%;
+  }
+  body .main_wrapper .first_description_wrapper_detail {
+    padding-top: 5rem;
+  }
+  body .main_wrapper .first_description_wrapper_detail .first_description_detail .first_description_content {
+    mix-blend-mode: multiply;
   }
 }
 @media (max-width: 810.98px) {
@@ -357,6 +378,8 @@ body .footer_wrapper .attribution a {
     width: auto;
     left: 3.5rem;
     right: 3.5rem;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
   }
   body .header_wrapper .header__nav .sub_header_nav .header_nav_wrapper .navbar {
     display: block;
@@ -434,7 +457,7 @@ body .footer_wrapper .attribution a {
     color: hsl(0, 0%, 100%);
     font-size: 1.3rem;
   }
-  body .header_wrapper .header__nav .sub_header_nav .header_nav_wrapper.show {
+  body .header_wrapper .header__nav .sub_header_nav .header_nav_wrapper.show_menu {
     opacity: 1;
   }
   body .header_wrapper .header__nav .hamburger_menu {
@@ -442,22 +465,40 @@ body .footer_wrapper .attribution a {
     opacity: 1;
     width: 2.5rem;
     height: 1.5rem;
+    margin-top: -0.2rem;
   }
   body .header_wrapper .header__nav .hamburger_menu.active {
     display: none;
   }
   body .header_wrapper .header__nav .close_menu {
     display: none;
-    margin-top: 0.2rem;
+    margin-top: -0.9rem;
     width: 2.5rem;
     height: 2.3rem;
   }
   body .header_wrapper .header__nav .close_menu.active {
     display: block;
   }
+  body .main_wrapper {
+    background-position: 50% 30%;
+  }
+  body .main_wrapper .first_title {
+    padding-block-start: 7rem;
+  }
+  body .main_wrapper .first_description_wrapper_detail {
+    padding-top: 37rem;
+    padding-inline: 3.3rem;
+    text-align: center;
+  }
+  body .main_wrapper .first_description_wrapper_detail .first_description_detail {
+    max-width: 100%;
+  }
 }
 @media (max-width: 600.98px) {
   body .header_wrapper {
+    background-image: url("images/bg-pattern-intro-mobile.svg"), linear-gradient(130deg, hsl(13, 100%, 72%) 50%, hsl(356, 100%, 66%));
+    background-position: 40.3% 40.2%;
+    background-size: fill;
     padding-inline: 3.5rem;
   }
   body .header_wrapper .header__nav .sub_header_nav .header_nav_wrapper .navbar {
@@ -495,6 +536,20 @@ body .footer_wrapper .attribution a {
   body .header_wrapper .header_intro_wrapper .header_intro {
     font-size: 3.2rem;
   }
+  body .main_wrapper {
+    background-image: url("images/illustration-editor-mobile.svg");
+    background-size: auto;
+    background-position: 50% 28%;
+  }
+  body .main_wrapper .first_title {
+    font-size: 2rem;
+  }
+  body .main_wrapper .first_description_wrapper_detail {
+    padding-top: 23rem;
+  }
+  body .main_wrapper .first_description_wrapper_detail .first_description_detail .first_description_content {
+    margin-bottom: 2rem;
+  }
 }
 @media (max-width: 430.98px) {
   body .header_wrapper {
@@ -528,6 +583,18 @@ body .footer_wrapper .attribution a {
   }
   body .header_wrapper .header_intro_wrapper .sub_header_intro {
     font-size: 1.1rem;
+  }
+  body .main_wrapper {
+    background-image: url("images/illustration-editor-mobile.svg");
+    background-size: auto;
+    background-position: 50% 28%;
+  }
+  body .main_wrapper .first_title {
+    font-size: 1.7rem;
+  }
+  body .main_wrapper .first_description_wrapper_detail {
+    padding-top: 25rem;
+    padding-inline: 2rem;
   }
 }
 @media (max-width: 375.98px) {
