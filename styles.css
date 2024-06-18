@@ -245,7 +245,6 @@ body .main_wrapper .first_hero_wrapper {
   background-repeat: no-repeat;
   background-size: auto;
   background-position: 153.3% 95.5%;
-  background-color: aliceblue;
   min-height: 106.167dvh;
 }
 body .main_wrapper .first_hero_wrapper .first_title {
@@ -275,6 +274,40 @@ body .main_wrapper .first_hero_wrapper .first_description_wrapper .first_descrip
   color: hsla(206, 13%, 34%, 0.719);
   margin-bottom: 4.7rem;
 }
+body .main_wrapper .second_hero_wrapper {
+  margin-top: 3.2rem;
+  background-color: hsl(237, 23%, 32%);
+  background-image: url("images/bg-pattern-circles.svg");
+  background-size: 70% auto;
+  background-repeat: no-repeat;
+  background-position: -49% 82%;
+  border-top-right-radius: 6.3rem;
+  border-bottom-left-radius: 6.3rem;
+  min-height: 44.7dvh;
+  display: flex;
+  position: relative;
+  inset: 0;
+}
+body .main_wrapper .second_hero_wrapper .second_description_wrapper {
+  margin-inline-start: 46rem;
+  padding-block-start: 7.3rem;
+  color: hsl(0, 0%, 100%);
+}
+body .main_wrapper .second_hero_wrapper .second_description_wrapper .second_title {
+  font-size: 2.33rem;
+  font-weight: 500;
+}
+body .main_wrapper .second_hero_wrapper .second_description_wrapper .second_content {
+  padding-block-start: 1.4rem;
+  font-size: 1.055rem;
+  line-height: 1.6;
+  width: 550px;
+}
+body .main_wrapper .second_hero_wrapper .illustration-phones-img {
+  position: absolute;
+  top: -4.25rem;
+  left: 7.8rem;
+}
 body .footer_wrapper .attribution {
   font-size: 11px;
   text-align: center;
@@ -292,16 +325,35 @@ body .footer_wrapper .attribution a {
   }
   body .main_wrapper .first_hero_wrapper {
     background-position: 150.3% 90.7%;
-    background-size: 70% 85%;
+    background-size: 70% 90%;
+  }
+  body .main_wrapper .first_hero_wrapper .first_title {
+    padding-block-start: 8.6rem;
   }
   body .main_wrapper .first_hero_wrapper .first_description_wrapper {
+    padding-top: 3rem;
     padding-inline-start: 5.3rem;
+  }
+  body .main_wrapper .second_hero_wrapper .second_description_wrapper {
+    margin-inline-start: 37rem;
+    padding-block-start: 3.5rem;
+  }
+  body .main_wrapper .second_hero_wrapper .illustration-phones-img {
+    top: -4.25rem;
+    left: auto;
   }
 }
 @media (max-width: 1200.98px) {
   body .header_wrapper {
     padding-inline: 5rem;
     min-height: auto;
+  }
+  body .main_wrapper .second_hero_wrapper .second_description_wrapper {
+    margin-inline-start: 28rem;
+  }
+  body .main_wrapper .second_hero_wrapper .illustration-phones-img {
+    max-width: 27rem;
+    top: 2.1rem;
   }
 }
 @media (max-width: 950.98px) {
@@ -318,8 +370,8 @@ body .footer_wrapper .attribution a {
          column-gap: 2rem;
   }
   body .main_wrapper .first_hero_wrapper {
-    background-position: 300.3% 25.7%;
-    background-size: 85% 80%;
+    background-position: 900.3% 25.7%;
+    background-size: 95% 80%;
   }
   body .main_wrapper .first_hero_wrapper .first_description_wrapper {
     padding-top: 4rem;
@@ -327,8 +379,19 @@ body .footer_wrapper .attribution a {
   body .main_wrapper .first_hero_wrapper .first_description_wrapper .first_description_detail .first_description_content {
     mix-blend-mode: multiply;
   }
+  body .main_wrapper .second_hero_wrapper {
+    margin-top: 0;
+    padding-inline-end: 1rem;
+  }
+  body .main_wrapper .second_hero_wrapper .second_description_wrapper {
+    margin-inline-start: 27rem;
+    padding-block-start: 7.3rem;
+  }
+  body .main_wrapper .second_hero_wrapper .second_description_wrapper .second_content {
+    width: 100%;
+  }
 }
-@media (max-width: 810.98px) {
+@media (max-width: 768.98px) {
   body .header_wrapper {
     padding-inline: 3.5rem;
   }
@@ -470,6 +533,20 @@ body .footer_wrapper .attribution a {
   body .main_wrapper .first_hero_wrapper .first_description_wrapper .first_description_detail .first_description_content {
     margin-bottom: 3rem;
   }
+  body .main_wrapper .second_hero_wrapper .second_description_wrapper {
+    margin-inline-start: 23rem;
+    padding-block-start: 5.3rem;
+  }
+  body .main_wrapper .second_hero_wrapper .second_description_wrapper .second_title {
+    font-size: 1.9rem;
+  }
+  body .main_wrapper .second_hero_wrapper .second_description_wrapper .second_content {
+    font-size: 0.9rem;
+  }
+  body .main_wrapper .second_hero_wrapper .illustration-phones-img {
+    width: 23rem;
+    top: 2rem;
+  }
 }
 @media (max-width: 600.98px) {
   body .header_wrapper {
@@ -518,6 +595,20 @@ body .footer_wrapper .attribution a {
   }
   body .main_wrapper .first_hero_wrapper .first_description_wrapper .first_description_detail .first_description_content {
     margin-bottom: 2rem;
+  }
+  body .main_wrapper .second_hero_wrapper {
+    margin-top: 20rem;
+  }
+  body .main_wrapper .second_hero_wrapper .second_description_wrapper {
+    margin-inline-start: 0;
+    text-align: center;
+    padding-block-start: 7.3rem;
+    padding-inline: 2rem;
+    padding-block-end: 2rem;
+  }
+  body .main_wrapper .second_hero_wrapper .illustration-phones-img {
+    top: -15rem;
+    right: 2.1rem;
   }
 }
 @media (max-width: 430.98px) {

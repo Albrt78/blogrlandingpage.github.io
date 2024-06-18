@@ -312,7 +312,6 @@ body {
             background-repeat: no-repeat;
             background-size: auto;
             background-position: 153.3% 95.5%;
-            background-color: aliceblue;
             min-height: 106.167dvh;
 
             .first_title {
@@ -348,43 +347,44 @@ body {
             }
         }
 
-        // .main_wrapper-description_state_of_art_wrapper {
-        //     margin-top: 16rem;
-        //     background-color: $Very-dark-blue;
-        //     background-image: url("images/bg-pattern-circles.svg");
-        //     background-size: 70% auto;
-        //     background-repeat: no-repeat;
-        //     background-position: -49% 82%;
-        //     border-top-right-radius: 6.3rem;
-        //     border-bottom-left-radius: 6.3rem;
-        //     min-height: 44.7dvh;
-        //     position: relative;
+        .second_hero_wrapper {
+            margin-top: 3.2rem;
+            background-color: $Very-dark-desaturated-blue;
+            background-image: url("images/bg-pattern-circles.svg");
+            background-size: 70% auto;
+            background-repeat: no-repeat;
+            background-position: -49% 82%;
+            border-top-right-radius: 6.3rem;
+            border-bottom-left-radius: 6.3rem;
+            min-height: 44.7dvh;
+            display: flex;
+            position: relative;
+            inset: 0;
 
-        //     .description_state_of_art_wrapper-detail {
-        //         margin-inline-start: 46rem;
-        //         padding-block-start: 7.3rem;
-        //         color: $White;
-        //         max-width: 570px;
+            .second_description_wrapper {
+                margin-inline-start: 46rem;
+                padding-block-start: 7.3rem;
+                color: $White;
 
-        //         .description_state_of_art {
-        //             font-size: 2.33rem;
-        //             font-weight: 500;
-        //         }
+                .second_title {
+                    font-size: 2.33rem;
+                    font-weight: 500;
+                }
 
-        //         .description_state_of_art_content {
-        //             padding-block-start: 1.4rem;
-        //             font-size: 1.055rem;
-        //             line-height: 1.6;
-        //             width: 550px;
-        //         }
-        //     }
+                .second_content {
+                    padding-block-start: 1.4rem;
+                    font-size: 1.055rem;
+                    line-height: 1.6;
+                    width: 550px;
+                }
+            }
 
-        //     .illustration-phones-img {
-        //         position: absolute;
-        //         top: -4.25rem;
-        //         left: 7.8rem;
-        //     }
-        // }
+            .illustration-phones-img {
+                position: absolute;
+                top: -4.25rem;
+                left: 7.8rem;
+            }
+        }
     }
 
     .footer_wrapper {
@@ -415,50 +415,29 @@ body {
         .main_wrapper {
             .first_hero_wrapper {
                 background-position: 150.3% 90.7%;
-                background-size: 70% 85%;
+                background-size: 70% 90%;
+
+                .first_title {
+                    padding-block-start: 8.6rem;
+                }
 
                 .first_description_wrapper {
+                    padding-top: 3rem;
                     padding-inline-start: 5.3rem;
                 }
             }
 
-            // .main_wrapper-description_state_of_art_wrapper {
-            //     margin-top: -6rem;
-            //     background-color: $Very-dark-blue;
-            //     background-image: url("images/bg-pattern-circles.svg");
-            //     background-size: 70% auto;
-            //     background-repeat: no-repeat;
-            //     background-position: -49% 82%;
-            //     border-top-right-radius: 6.3rem;
-            //     border-bottom-left-radius: 6.3rem;
-            //     min-height: 44.7dvh;
-            //     position: relative;
+            .second_hero_wrapper {
+                .second_description_wrapper {
+                    margin-inline-start: 37rem;
+                    padding-block-start: 3.5rem;
+                }
 
-            //     .description_state_of_art_wrapper-detail {
-            //         margin-inline-start: 40rem;
-            //         padding-block-start: 4rem;
-            //         color: $White;
-            //         max-width: 570px;
-
-            //         .description_state_of_art {
-            //             font-size: 2.33rem;
-            //             font-weight: 500;
-            //         }
-
-            //         .description_state_of_art_content {
-            //             padding-block-start: 1.4rem;
-            //             font-size: 1.055rem;
-            //             line-height: 1.6;
-            //             width: 550px;
-            //         }
-            //     }
-
-            //     .illustration-phones-img {
-            //         position: absolute;
-            //         top: -4.25rem;
-            //         left: 7.8rem;
-            //     }
-            // }
+                .illustration-phones-img {
+                    top: -4.25rem;
+                    left: auto;
+                }
+            }
         }
     }
 }
@@ -468,6 +447,19 @@ body {
         .header_wrapper {
             padding-inline: 5rem;
             min-height: auto;
+        }
+
+        .main_wrapper {
+            .second_hero_wrapper {
+                .second_description_wrapper {
+                    margin-inline-start: 28rem;
+                }
+
+                .illustration-phones-img {
+                    max-width: 27rem;
+                    top: 2.1rem;
+                }
+            }
         }
     }
 }
@@ -489,8 +481,8 @@ body {
 
         .main_wrapper {
             .first_hero_wrapper {
-                background-position: 300.3% 25.7%;
-                background-size: 85% 80%;
+                background-position: 900.3% 25.7%;
+                background-size: 95% 80%;
 
                 .first_description_wrapper {
                     padding-top: 4rem;
@@ -502,11 +494,25 @@ body {
                     }
                 }
             }
+
+            .second_hero_wrapper {
+                margin-top: 0;
+                padding-inline-end: 1rem;
+
+                .second_description_wrapper {
+                    margin-inline-start: 27rem;
+                    padding-block-start: 7.3rem;
+
+                    .second_content {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }
 
-@media (max-width: 810.98px) {
+@media (max-width: 768.98px) {
     body {
         .header_wrapper {
             padding-inline: 3.5rem;
@@ -683,6 +689,26 @@ body {
                     }
                 }
             }
+
+            .second_hero_wrapper {
+                .second_description_wrapper {
+                    margin-inline-start: 23rem;
+                    padding-block-start: 5.3rem;
+
+                    .second_title {
+                        font-size: 1.9rem;
+                    }
+
+                    .second_content {
+                        font-size: 0.9rem;
+                    }
+                }
+
+                .illustration-phones-img {
+                    width: 23rem;
+                    top: 2rem;
+                }
+            }
         }
     }
 }
@@ -766,6 +792,23 @@ body {
                             margin-bottom: 2rem;
                         }
                     }
+                }
+            }
+
+            .second_hero_wrapper {
+                margin-top: 20rem;
+
+                .second_description_wrapper {
+                    margin-inline-start: 0;
+                    text-align: center;
+                    padding-block-start: 7.3rem;
+                    padding-inline: 2rem;
+                    padding-block-end: 2rem;
+                }
+
+                .illustration-phones-img {
+                    top: -15rem;
+                    right: 2.1rem;
                 }
             }
         }
