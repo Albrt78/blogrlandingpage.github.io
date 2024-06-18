@@ -61,6 +61,7 @@ $Very-dark-desaturated-blue: hsl(237, 23%, 32%);
 
 body {
     margin: 0;
+    min-height: 100dvh;
 
     .header_wrapper {
         background-image: url("images/bg-pattern-intro-desktop.svg"),
@@ -303,81 +304,87 @@ body {
 
     .main_wrapper {
         font-family: "Overpass", sans-serif;
-        background-image: url("images/illustration-editor-desktop.svg");
-        background-position: 153.3% 31.7%;
-        background-repeat: no-repeat;
-        background-size: auto;
+        background-color: red;
+        min-height: 270.5dvh;
 
-        .first_title {
-            text-align: center;
-            font-size: 2.34rem;
-            font-weight: 500;
-            letter-spacing: -0.009rem;
-            padding-block-start: 9.7rem;
-            color: $Very-dark-gray-blue;
-        }
-
-        .first_description_wrapper_detail {
-            min-height: 100dvh;
-            padding-top: 6.5rem;
-            padding-inline-start: 10.3rem;
-
-            .first_description_detail {
-                max-width: 540px;
-
-                .first_description_title {
-                    font-size: 1.74rem;
-                    font-weight: 500;
-                    color: $Very-dark-gray-blue;
-                }
-
-                .first_description_content {
-                    padding-top: 1.5rem;
-                    font-size: 0.89rem;
-                    line-height: 1.63;
-                    color: hsla(206, 13%, 34%, 0.719);
-                    margin-bottom: 4.8rem;
-                }
-            }
-        }
-
-        .main_wrapper-description_state_of_art_wrapper {
-            margin-block-start: 16rem;
-            background-color: $Very-dark-blue;
-            background-image: url("images/bg-pattern-circles.svg");
-            background-size: 70% auto;
+        .first_hero_wrapper {
+            background-image: url("images/illustration-editor-desktop.svg");
             background-repeat: no-repeat;
-            background-position: -49% 82%;
-            border-top-right-radius: 6.3rem;
-            border-bottom-left-radius: 6.3rem;
-            min-height: 44.5dvh;
-            position: relative;
+            background-size: auto;
+            background-position: 153.3% 95.5%;
+            background-color: aliceblue;
+            min-height: 106.167dvh;
 
-            .description_state_of_art_wrapper-detail {
-                margin-inline-start: 46rem;
-                padding-block-start: 7.3rem;
-                color: $White;
-                max-width: 570px;
-
-                .description_state_of_art {
-                    font-size: 2.33rem;
-                    font-weight: 500;
-                }
-
-                .description_state_of_art_content {
-                    padding-block-start: 1.4rem;
-                    font-size: 1.055rem;
-                    line-height: 1.6;
-                    width: 550px;
-                }
+            .first_title {
+                text-align: center;
+                font-size: 2.34rem;
+                font-weight: 500;
+                letter-spacing: -0.009rem;
+                padding-block-start: 9.6rem;
+                color: $Very-dark-gray-blue;
             }
 
-            .illustration-phones-img {
-                position: absolute;
-                top: -4.25rem;
-                left: 7.8rem;
+            .first_description_wrapper {
+                padding-top: 6.5rem;
+                padding-inline-start: 10.3rem;
+
+                .first_description_detail {
+                    max-width: 540px;
+
+                    .first_description_title {
+                        font-size: 1.74rem;
+                        font-weight: 500;
+                        color: $Very-dark-gray-blue;
+                    }
+
+                    .first_description_content {
+                        padding-top: 1.5rem;
+                        font-size: 0.89rem;
+                        line-height: 1.63;
+                        color: hsla(206, 13%, 34%, 0.719);
+                        margin-bottom: 4.7rem;
+                    }
+                }
             }
         }
+
+        // .main_wrapper-description_state_of_art_wrapper {
+        //     margin-top: 16rem;
+        //     background-color: $Very-dark-blue;
+        //     background-image: url("images/bg-pattern-circles.svg");
+        //     background-size: 70% auto;
+        //     background-repeat: no-repeat;
+        //     background-position: -49% 82%;
+        //     border-top-right-radius: 6.3rem;
+        //     border-bottom-left-radius: 6.3rem;
+        //     min-height: 44.7dvh;
+        //     position: relative;
+
+        //     .description_state_of_art_wrapper-detail {
+        //         margin-inline-start: 46rem;
+        //         padding-block-start: 7.3rem;
+        //         color: $White;
+        //         max-width: 570px;
+
+        //         .description_state_of_art {
+        //             font-size: 2.33rem;
+        //             font-weight: 500;
+        //         }
+
+        //         .description_state_of_art_content {
+        //             padding-block-start: 1.4rem;
+        //             font-size: 1.055rem;
+        //             line-height: 1.6;
+        //             width: 550px;
+        //         }
+        //     }
+
+        //     .illustration-phones-img {
+        //         position: absolute;
+        //         top: -4.25rem;
+        //         left: 7.8rem;
+        //     }
+        // }
     }
 
     .footer_wrapper {
@@ -406,13 +413,52 @@ body {
         }
 
         .main_wrapper {
-            background-position: 150.3% 90.7%;
-            background-size: 70% 85%;
+            .first_hero_wrapper {
+                background-position: 150.3% 90.7%;
+                background-size: 70% 85%;
 
-            .first_description_wrapper_detail {
-                padding-top: 6rem;
-                padding-inline-start: 3.3rem;
+                .first_description_wrapper {
+                    padding-inline-start: 5.3rem;
+                }
             }
+
+            // .main_wrapper-description_state_of_art_wrapper {
+            //     margin-top: -6rem;
+            //     background-color: $Very-dark-blue;
+            //     background-image: url("images/bg-pattern-circles.svg");
+            //     background-size: 70% auto;
+            //     background-repeat: no-repeat;
+            //     background-position: -49% 82%;
+            //     border-top-right-radius: 6.3rem;
+            //     border-bottom-left-radius: 6.3rem;
+            //     min-height: 44.7dvh;
+            //     position: relative;
+
+            //     .description_state_of_art_wrapper-detail {
+            //         margin-inline-start: 40rem;
+            //         padding-block-start: 4rem;
+            //         color: $White;
+            //         max-width: 570px;
+
+            //         .description_state_of_art {
+            //             font-size: 2.33rem;
+            //             font-weight: 500;
+            //         }
+
+            //         .description_state_of_art_content {
+            //             padding-block-start: 1.4rem;
+            //             font-size: 1.055rem;
+            //             line-height: 1.6;
+            //             width: 550px;
+            //         }
+            //     }
+
+            //     .illustration-phones-img {
+            //         position: absolute;
+            //         top: -4.25rem;
+            //         left: 7.8rem;
+            //     }
+            // }
         }
     }
 }
@@ -442,15 +488,17 @@ body {
         }
 
         .main_wrapper {
-            background-position: 150.3% 25.7%;
-            background-size: 70% 45%;
+            .first_hero_wrapper {
+                background-position: 300.3% 25.7%;
+                background-size: 85% 80%;
 
-            .first_description_wrapper_detail {
-                padding-top: 5rem;
+                .first_description_wrapper {
+                    padding-top: 4rem;
 
-                .first_description_detail {
-                    .first_description_content {
-                        mix-blend-mode: multiply;
+                    .first_description_detail {
+                        .first_description_content {
+                            mix-blend-mode: multiply;
+                        }
                     }
                 }
             }
@@ -612,19 +660,27 @@ body {
         }
 
         .main_wrapper {
-            background-position: 50% 30%;
-
-            .first_title {
-                padding-block-start: 7rem;
-            }
-
-            .first_description_wrapper_detail {
-                padding-top: 37rem;
-                padding-inline: 3.3rem;
+            .first_hero_wrapper {
+                background-image: url("images/illustration-editor-mobile.svg");
+                background-position: center 30%;
+                background-size: auto;
                 text-align: center;
 
-                .first_description_detail {
-                    max-width: 100%;
+                .first_title {
+                    padding-block-start: 7rem;
+                }
+
+                .first_description_wrapper {
+                    padding-inline: 3rem;
+                    padding-top: 25rem;
+
+                    .first_description_detail {
+                        max-width: 100%;
+
+                        .first_description_content {
+                            margin-bottom: 3rem;
+                        }
+                    }
                 }
             }
         }
@@ -693,26 +749,22 @@ body {
 
             .header_intro_wrapper {
                 .header_intro {
-                    font-size: 3.2rem;
+                    font-size: 2.2rem;
                 }
             }
         }
 
         .main_wrapper {
-            background-image: url("images/illustration-editor-mobile.svg");
-            background-size: auto;
-            background-position: 50% 28%;
+            .first_hero_wrapper {
+                .first_title {
+                    font-size: 2rem;
+                }
 
-            .first_title {
-                font-size: 2rem;
-            }
-
-            .first_description_wrapper_detail {
-                padding-top: 23rem;
-
-                .first_description_detail {
-                    .first_description_content {
-                        margin-bottom: 2rem;
+                .first_description_wrapper {
+                    .first_description_detail {
+                        .first_description_content {
+                            margin-bottom: 2rem;
+                        }
                     }
                 }
             }
@@ -782,17 +834,16 @@ body {
         }
 
         .main_wrapper {
-            background-image: url("images/illustration-editor-mobile.svg");
-            background-size: auto;
-            background-position: 50% 28%;
+            .first_hero_wrapper {
+                background-position: center 25%;
 
-            .first_title {
-                font-size: 1.7rem;
-            }
+                .first_title {
+                    font-size: 1.7rem;
+                }
 
-            .first_description_wrapper_detail {
-                padding-top: 25rem;
-                padding-inline: 2rem;
+                .first_description_wrapper {
+                    padding-inline: 2rem;
+                }
             }
         }
     }
