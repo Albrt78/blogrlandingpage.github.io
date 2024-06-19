@@ -380,7 +380,7 @@ body .footer_wrapper .attribution a {
     mix-blend-mode: multiply;
   }
   body .main_wrapper .second_hero_wrapper {
-    margin-top: 0;
+    margin-top: 2.1rem;
     padding-inline-end: 1rem;
   }
   body .main_wrapper .second_hero_wrapper .second_description_wrapper {
@@ -608,7 +608,7 @@ body .footer_wrapper .attribution a {
   }
   body .main_wrapper .second_hero_wrapper .illustration-phones-img {
     top: -15rem;
-    right: 2.1rem;
+    right: 2.3rem;
   }
 }
 @media (max-width: 430.98px) {
@@ -653,6 +653,17 @@ body .footer_wrapper .attribution a {
   body .main_wrapper .first_hero_wrapper .first_description_wrapper {
     padding-inline: 2rem;
   }
+  body .main_wrapper .second_hero_wrapper .second_description_wrapper .second_title {
+    font-size: 1.7rem;
+  }
+  body .main_wrapper .second_hero_wrapper .second_description_wrapper .second_content {
+    padding-block-start: 0.9rem;
+    font-size: 0.8rem;
+  }
+  body .main_wrapper .second_hero_wrapper .illustration-phones-img {
+    top: -15rem;
+    right: 1.3rem;
+  }
 }
 @media (max-width: 375.98px) {
   body .header_wrapper {
@@ -683,5 +694,8 @@ body .footer_wrapper .attribution a {
   body .header_wrapper .header_button_intro .button_intro_right {
     padding: 0.7rem 1.7rem;
     font-size: 0.8rem;
+  }
+  body .main_wrapper .second_hero_wrapper .illustration-phones-img {
+    right: 0rem;
   }
 }/*# sourceMappingURL=styles.css.map */

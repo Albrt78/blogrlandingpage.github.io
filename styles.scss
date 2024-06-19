@@ -496,7 +496,7 @@ body {
             }
 
             .second_hero_wrapper {
-                margin-top: 0;
+                margin-top: 2.1rem;
                 padding-inline-end: 1rem;
 
                 .second_description_wrapper {
@@ -808,7 +808,7 @@ body {
 
                 .illustration-phones-img {
                     top: -15rem;
-                    right: 2.1rem;
+                    right: 2.3rem;
                 }
             }
         }
@@ -888,6 +888,24 @@ body {
                     padding-inline: 2rem;
                 }
             }
+
+            .second_hero_wrapper {
+                .second_description_wrapper {
+                    .second_title {
+                        font-size: 1.7rem;
+                    }
+
+                    .second_content {
+                        padding-block-start: 0.9rem;
+                        font-size: 0.8rem;
+                    }
+                }
+
+                .illustration-phones-img {
+                    top: -15rem;
+                    right: 1.3rem;
+                }
+            }
         }
     }
 }
@@ -931,6 +949,14 @@ body {
                 .button_intro_right {
                     padding: 0.7rem 1.7rem;
                     font-size: 0.8rem;
+                }
+            }
+        }
+
+        .main_wrapper {
+            .second_hero_wrapper {
+                .illustration-phones-img {
+                    right: 0rem;
                 }
             }
         }
