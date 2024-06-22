@@ -12,6 +12,8 @@ This is a solution to the [Blogr landing page challenge on Frontend Mentor](http
 
 ## Overview
 
+Frontend Mentor is an online platform that provides challenges for web developers to improve their skills by building realistic projects. These challenges typically involve creating frontend designs based on provided designs or specifications.
+
 ### The challenge
 
 Users should be able to:
