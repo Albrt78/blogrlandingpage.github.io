@@ -21,19 +21,19 @@ Users should be able to:
 
 ### Screenshot
 
-![Blogr Landing Page](./screenshot.jpg)
+![Blogr Landing Page](./Frontend-Mentor-Blogr-Screenshot.png)
 
 ### Links
 
 -   Solution URL: [Blogr Landing Page](https://github.com/Albrt78/blogrlandingpage.github.io)
--   Live Site URL: [Blogr Landing Page](https://your-live-site-url.com)
+-   Live Site URL: [Blogr Landing Page](https://albrt78.github.io/blogrlandingpage.github.io/)
 
 ### Built with
 
 -   Semantic HTML5 markup
 -   CSS custom properties
 -   Flexbox
--   [SASS](https://reactjs.org/) - CSS Preprocessor
+-   [SASS](https://sass-lang.com/) - CSS Preprocessor
 
 ## Author
 
