@@ -60,9 +60,6 @@ $Very-dark-desaturated-blue: hsl(237, 23%, 32%);
 }
 
 body {
-    margin: 0;
-    min-height: 100dvh;
-
     .header_wrapper {
         background-image: url("images/bg-pattern-intro-desktop.svg"),
             linear-gradient(130deg, $Very-light-red-1 50%, $Light-red);
@@ -249,16 +246,16 @@ body {
             }
 
             .sub_header_intro {
-                margin-top: 1rem;
+                margin-top: 0.9rem;
                 text-align: center;
-                font-size: 1.23rem;
+                font-size: 1.07rem;
             }
         }
 
         .header_button_intro {
             display: flex;
             justify-content: center;
-            margin-top: 2.5rem;
+            margin-top: 2.8rem;
             gap: 1rem;
             font-family: "Ubuntu", sans-serif;
             cursor: pointer;
@@ -304,7 +301,6 @@ body {
 
     .main_wrapper {
         font-family: "Overpass", sans-serif;
-        background-color: red;
         min-height: 270.5dvh;
 
         .first_hero_wrapper {
@@ -337,7 +333,7 @@ body {
                     }
 
                     .first_description_content {
-                        padding-top: 1.5rem;
+                        padding-top: 1.6rem;
                         font-size: 0.89rem;
                         line-height: 1.63;
                         color: hsla(206, 13%, 34%, 0.719);
@@ -348,9 +344,14 @@ body {
         }
 
         .second_hero_wrapper {
-            margin-top: 3.2rem;
+            margin-top: 3.32rem;
+            background-image: url("images/bg-pattern-circles.svg"),
+                linear-gradient(
+                    90deg,
+                    $Very-dark-gray-blue 10%,
+                    $Very-dark-desaturated-blue
+                );
             background-color: $Very-dark-desaturated-blue;
-            background-image: url("images/bg-pattern-circles.svg");
             background-size: 70% auto;
             background-repeat: no-repeat;
             background-position: -49% 82%;
@@ -385,22 +386,151 @@ body {
                 left: 7.8rem;
             }
         }
+
+        .third_hero_wrapper {
+            min-height: 113.633dvh;
+            background-image: url("images/illustration-laptop-desktop.svg");
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: -60% 48.3%;
+
+            .third_description_wrapper {
+                margin-inline-start: 46rem;
+                padding-block-start: 19rem;
+                color: $Very-dark-desaturated-blue;
+
+                .third_description_detail {
+                    max-width: 540px;
+
+                    .third_description_title {
+                        font-size: 1.74rem;
+                        font-weight: 500;
+                        color: $Very-dark-gray-blue;
+                    }
+
+                    .third_description_content {
+                        padding-top: 1.6rem;
+                        font-size: 0.88rem;
+                        line-height: 1.65;
+                        color: hsla(206, 13%, 34%, 0.719);
+                        margin-bottom: 4.7rem;
+                    }
+                }
+            }
+        }
     }
 
     .footer_wrapper {
+        background-color: $Very-dark-black-blue;
+        padding-inline: 10.3rem;
+        padding-block-start: 4.3rem;
+        font-family: "Ubuntu", sans-serif;
+        border-top-right-radius: 6.3rem;
+
+        .footer_wrapperr {
+            display: flex;
+            gap: 11.5rem;
+
+            .footer_content {
+                display: flex;
+                column-gap: 12.6rem;
+                padding-top: 0.6rem;
+                width: 100%;
+
+                .footer_content_wrapper {
+                    .footer_title {
+                        font-size: 0.93rem;
+                        padding-bottom: 2.2rem;
+                        color: $White;
+                        font-weight: 600;
+                    }
+
+                    .footer_detail {
+                        .footer_link {
+                            margin-bottom: 1rem;
+                            color: $White;
+                            font-size: 0.95rem;
+                            font-weight: 300;
+
+                            .link {
+                                color: $White;
+                            }
+                        }
+                    }
+
+                    &:last-child {
+                        margin-left: 1.1rem;
+                    }
+                }
+            }
+        }
+
         .attribution {
             font-size: 11px;
             text-align: center;
+            color: $White;
 
             a {
-                color: hsl(228, 45%, 44%);
+                &:visited {
+                    color: $Very-dark-desaturated-blue;
+                }
             }
         }
     }
 }
 
 // Media Query
-@media (max-width: 1280.98px) {
+@mixin smallerDevices {
+    @media screen and (max-width: 320.98px) {
+        @content;
+    }
+}
+
+@mixin smallPhoneScreen {
+    @media screen and (max-width: 375.98px) {
+        @content;
+    }
+}
+
+@mixin phoneScreen {
+    @media screen and (max-width: 390.98px) {
+        @content;
+    }
+}
+
+@mixin mediumPhoneScreen {
+    @media screen and (max-width: 430.98px) {
+        @content;
+    }
+}
+
+@mixin tabletScreen {
+    @media screen and (max-width: 768.98px) {
+        @content;
+    }
+}
+
+@mixin mediumTabletScreen {
+    @media screen and (max-width: 885.98px) {
+        @content;
+    }
+}
+
+@mixin largeScreen {
+    @media screen and (max-width: 1200.98px) {
+        @content;
+    }
+}
+
+@mixin X-largeScreen {
+    @media screen and (max-width: 1280.98px) {
+        @content;
+    }
+}
+
+// ------------------------------------------//
+
+@include X-largeScreen {
     body {
         .header_wrapper {
             padding-block-end: 5rem;
@@ -414,8 +544,8 @@ body {
 
         .main_wrapper {
             .first_hero_wrapper {
-                background-position: 150.3% 90.7%;
-                background-size: 70% 90%;
+                background-position: 110.3% 100.7%;
+                background-size: 50% auto;
 
                 .first_title {
                     padding-block-start: 8.6rem;
@@ -423,11 +553,20 @@ body {
 
                 .first_description_wrapper {
                     padding-top: 3rem;
-                    padding-inline-start: 5.3rem;
+                    padding-inline-start: 3.3rem;
+
+                    .first_description_detail {
+                        .first_description_content {
+                            padding-top: 1.6rem;
+                            margin-bottom: 2rem;
+                        }
+                    }
                 }
             }
 
             .second_hero_wrapper {
+                margin-top: 10rem;
+
                 .second_description_wrapper {
                     margin-inline-start: 37rem;
                     padding-block-start: 3.5rem;
@@ -438,11 +577,32 @@ body {
                     left: auto;
                 }
             }
+
+            .third_hero_wrapper {
+                background-position: 0% 99.7%;
+                background-size: 50% auto;
+                margin-top: 7rem;
+
+                .third_description_wrapper {
+                    margin-inline-start: 37rem;
+
+                    .third_description_detail {
+                        max-width: 100%;
+                        padding-inline-end: 2rem;
+                    }
+                }
+            }
+        }
+
+        .footer_wrapper {
+            margin-top: 10rem;
+            padding-inline: 5rem;
+            column-gap: auto;
         }
     }
 }
 
-@media (max-width: 1200.98px) {
+@include largeScreen {
     body {
         .header_wrapper {
             padding-inline: 5rem;
@@ -450,21 +610,35 @@ body {
         }
 
         .main_wrapper {
+            .first_hero_wrapper {
+                background-position: 110.3% 99.7%;
+            }
+
             .second_hero_wrapper {
                 .second_description_wrapper {
                     margin-inline-start: 28rem;
+                    padding-block-start: 3.4rem;
                 }
 
                 .illustration-phones-img {
                     max-width: 27rem;
-                    top: 2.1rem;
+                    top: -3rem;
                 }
             }
+
+            .third_hero_wrapper {
+                background-position: -10% 110.7%;
+                background-size: 60%;
+            }
+        }
+
+        .footer_wrapper {
+            padding-block-start: 3rem;
         }
     }
 }
 
-@media (max-width: 950.98px) {
+@include mediumTabletScreen {
     body {
         .header_wrapper {
             padding-inline: 3.5rem;
@@ -481,12 +655,10 @@ body {
 
         .main_wrapper {
             .first_hero_wrapper {
-                background-position: 900.3% 25.7%;
-                background-size: 95% 80%;
+                background-position: 190% 20.7%;
+                background-size: 80%;
 
                 .first_description_wrapper {
-                    padding-top: 4rem;
-
                     .first_description_detail {
                         .first_description_content {
                             mix-blend-mode: multiply;
@@ -496,7 +668,6 @@ body {
             }
 
             .second_hero_wrapper {
-                margin-top: 2.1rem;
                 padding-inline-end: 1rem;
 
                 .second_description_wrapper {
@@ -507,12 +678,52 @@ body {
                         width: 100%;
                     }
                 }
+
+                .illustration-phones-img {
+                    top: 2rem;
+                }
+            }
+
+            .third_hero_wrapper {
+                background-position: -43% 45%;
+                background-size: 70%;
+
+                .third_description_wrapper {
+                    margin-inline-start: 26rem;
+                    padding-block-start: 27rem;
+
+                    .third_description_detail {
+                        .third_description_content {
+                            padding-top: 1rem;
+                            margin-bottom: 3.7rem;
+                            mix-blend-mode: multiply;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer_wrapper {
+            margin-top: -10rem;
+
+            .footer_wrapperr {
+                gap: 7.5rem;
+
+                .footer_content {
+                    gap: 7rem;
+
+                    .footer_content_wrapper {
+                        &:last-child {
+                            margin-left: 0;
+                        }
+                    }
+                }
             }
         }
     }
 }
 
-@media (max-width: 768.98px) {
+@include tabletScreen {
     body {
         .header_wrapper {
             padding-inline: 3.5rem;
@@ -668,7 +879,7 @@ body {
         .main_wrapper {
             .first_hero_wrapper {
                 background-image: url("images/illustration-editor-mobile.svg");
-                background-position: center 30%;
+                background-position: center 35%;
                 background-size: auto;
                 text-align: center;
 
@@ -678,7 +889,7 @@ body {
 
                 .first_description_wrapper {
                     padding-inline: 3rem;
-                    padding-top: 25rem;
+                    padding-top: 27rem;
 
                     .first_description_detail {
                         max-width: 100%;
@@ -709,113 +920,37 @@ body {
                     top: 2rem;
                 }
             }
-        }
-    }
-}
 
-@media (max-width: 600.98px) {
-    body {
-        .header_wrapper {
-            background-image: url("images/bg-pattern-intro-mobile.svg"),
-                linear-gradient(130deg, $Very-light-red-1 50%, $Light-red);
-            background-position: 40.3% 40.2%; // x%, y%
-            background-size: fill;
-            padding-inline: 3.5rem;
+            .third_hero_wrapper {
+                background-image: url("images/illustration-laptop-mobile.svg");
+                background-position: center 5%;
+                background-size: auto;
+                text-align: center;
 
-            .header__nav {
-                .sub_header_nav {
-                    .header_nav_wrapper {
-                        .navbar {
-                            padding-inline: 0;
-                            padding-block-start: 1rem;
+                .third_description_wrapper {
+                    margin-inline: 0;
+                    padding-inline: 3rem;
+                    max-width: 100%;
+                    padding-top: 25rem;
 
-                            .header_dropdown_product,
-                            .header_dropdown_company,
-                            .header_dropdown_connect {
-                                .content {
-                                    padding-top: 2.3rem;
-
-                                    ul {
-                                        li {
-                                            a {
-                                                font-size: 1.1rem;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            .dropdown_label_wrapper {
-                                .dropdown_category {
-                                    font-size: 1.1rem;
-                                    margin-bottom: 2rem;
-                                }
-                            }
-                        }
-
-                        .header_button {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            width: auto;
-                            margin-inline: auto;
-
-                            .header_button-login {
-                                width: 100%;
-                                font-size: 1.1rem;
-                            }
-
-                            .header_button-sign-up {
-                                font-size: 1.1rem;
-                            }
-                        }
+                    .third_description_detail {
+                        padding-inline-end: 0;
                     }
-                }
-            }
-
-            .header_intro_wrapper {
-                .header_intro {
-                    font-size: 2.2rem;
                 }
             }
         }
 
-        .main_wrapper {
-            .first_hero_wrapper {
-                .first_title {
-                    font-size: 2rem;
-                }
+        .footer_wrapper {
+            padding-inline: 3rem;
 
-                .first_description_wrapper {
-                    .first_description_detail {
-                        .first_description_content {
-                            margin-bottom: 2rem;
-                        }
-                    }
-                }
-            }
-
-            .second_hero_wrapper {
-                margin-top: 20rem;
-
-                .second_description_wrapper {
-                    margin-inline-start: 0;
-                    text-align: center;
-                    padding-block-start: 7.3rem;
-                    padding-inline: 2rem;
-                    padding-block-end: 2rem;
-                }
-
-                .illustration-phones-img {
-                    top: -15rem;
-                    right: 2.3rem;
-                }
+            .footer_wrapperr {
+                gap: 6rem;
             }
         }
     }
 }
 
-@media (max-width: 430.98px) {
+@include mediumPhoneScreen {
     body {
         .header_wrapper {
             padding-inline: 2rem;
@@ -878,7 +1013,95 @@ body {
 
         .main_wrapper {
             .first_hero_wrapper {
-                background-position: center 25%;
+                background-position: center 27%;
+
+                .first_title {
+                    font-size: 2rem;
+                }
+
+                .first_description_wrapper {
+                    padding-top: 28rem;
+                }
+            }
+
+            .second_hero_wrapper {
+                margin-top: 20rem;
+                padding-inline-end: 0;
+                background-position: center 200%;
+                background-color: $Very-dark-gray-blue;
+                background-size: 100%;
+
+                .second_description_wrapper {
+                    margin-top: 2.7rem;
+                    margin-inline-start: 0;
+                    text-align: center;
+                    padding-inline: 2rem;
+                    padding-block-start: 8rem;
+                    padding-block-end: 3rem;
+
+                    .second_title {
+                        font-size: 2rem;
+                    }
+
+                    .second_content {
+                        font-size: 0.9rem;
+                    }
+                }
+
+                .illustration-phones-img {
+                    width: 100%;
+                    top: -15rem;
+                    right: 0;
+                    left: 0;
+                }
+            }
+
+            .third_hero_wrapper {
+                background-position: center 27%;
+                background-size: 100%;
+
+                .third_description_wrapper {
+                    padding-inline: 2rem;
+                    padding-top: 31rem;
+
+                    .third_description_detail {
+                        .third_description_content {
+                            margin-bottom: 3rem;
+                            padding-top: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer_wrapper {
+            margin-top: 10rem;
+            text-align: center;
+
+            .footer_wrapperr {
+                flex-direction: column;
+                gap: 2rem;
+
+                .footer_content {
+                    flex-direction: column;
+                    row-gap: 4rem;
+
+                    .footer_content_wrapper {
+                        .footer_title {
+                            padding-bottom: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include phoneScreen {
+    body {
+        .main_wrapper {
+            .first_hero_wrapper {
+                background-position: center 28%;
 
                 .first_title {
                     font-size: 1.7rem;
@@ -886,46 +1109,109 @@ body {
 
                 .first_description_wrapper {
                     padding-inline: 2rem;
+                    padding-top: 30rem;
                 }
             }
 
             .second_hero_wrapper {
                 .second_description_wrapper {
+                    margin-top: 1.7rem;
+                    padding-inline: 1rem;
+
                     .second_title {
-                        font-size: 1.7rem;
+                        font-size: 1.6rem;
                     }
 
                     .second_content {
                         padding-block-start: 0.9rem;
-                        font-size: 0.8rem;
+                        font-size: 0.7rem;
                     }
                 }
+            }
 
-                .illustration-phones-img {
-                    top: -15rem;
-                    right: 1.3rem;
+            .third_hero_wrapper {
+                .third_description_wrapper {
+                    padding-top: 29rem;
                 }
             }
         }
     }
 }
 
-@media (max-width: 375.98px) {
+@include smallPhoneScreen {
     body {
         .header_wrapper {
-            padding-inline: 2rem;
+            background-image: url("images/bg-pattern-intro-mobile.svg"),
+                linear-gradient(130deg, $Very-light-red-1 50%, $Light-red);
+            background-position: 40.3% 40.2%; // x%, y%
+            background-size: fill;
+            padding-inline: 2.5rem;
 
             .header__nav {
                 .header_logo {
                     width: 6rem;
                 }
 
+                .sub_header_nav {
+                    .header_nav_wrapper {
+                        left: 2.5rem;
+                        right: 2.5rem;
+
+                        .navbar {
+                            padding-inline: 0;
+                            padding-block-start: 1rem;
+
+                            .header_dropdown_product,
+                            .header_dropdown_company,
+                            .header_dropdown_connect {
+                                .content {
+                                    padding-top: 2.3rem;
+
+                                    ul {
+                                        li {
+                                            a {
+                                                font-size: 1.1rem;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .dropdown_label_wrapper {
+                                .dropdown_category {
+                                    font-size: 1.1rem;
+                                    margin-bottom: 2rem;
+                                }
+                            }
+                        }
+
+                        .header_button {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            width: auto;
+                            margin-inline: auto;
+
+                            .header_button-login {
+                                width: 100%;
+                                font-size: 1.1rem;
+                            }
+
+                            .header_button-sign-up {
+                                font-size: 1.1rem;
+                            }
+                        }
+                    }
+                }
+
                 .hamburger_menu {
+                    margin-top: -0.6rem;
                     width: 2rem;
                     height: 1.2rem;
                 }
 
                 .close_menu {
+                    margin-top: -1.1rem;
                     width: 2rem;
                     height: 1.8rem;
                 }
@@ -933,7 +1219,6 @@ body {
 
             .header_intro_wrapper {
                 .header_intro {
-                    margin-top: 0;
                     font-size: 2rem;
                 }
             }
@@ -954,9 +1239,120 @@ body {
         }
 
         .main_wrapper {
+            .first_hero_wrapper {
+                background-position: center 24%;
+                background-size: 100%;
+
+                .first_title {
+                    font-size: 1.8rem;
+                }
+
+                .first_description_wrapper {
+                    padding-top: 22rem;
+
+                    .first_description_detail {
+                        .first_description_content {
+                            margin-bottom: 2rem;
+                        }
+                    }
+                }
+            }
+
             .second_hero_wrapper {
+                background-position: center 400%;
+
+                .second_description_wrapper {
+                    padding-block-start: 6.3rem;
+                    padding-inline: 2rem;
+                    padding-top: auto;
+
+                    .second_title {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include smallerDevices {
+    body {
+        .header_wrapper {
+            padding-inline: 2rem;
+            padding-block-end: 3.5rem;
+
+            .header__nav {
+                padding-block: 3.7rem;
+            }
+
+            .header_intro_wrapper {
+                .header_intro {
+                    margin-top: -1.7rem;
+                    font-size: 1.8rem;
+                }
+
+                .sub_header_intro {
+                    font-size: smaller;
+                }
+            }
+
+            .header_button_intro {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 1rem;
+            }
+        }
+
+        .main_wrapper {
+            .first_hero_wrapper {
+                background-position: center 27%;
+                background-size: 100%;
+
+                .first_title {
+                    font-size: 1.5rem;
+                }
+
+                .first_description_wrapper {
+                    padding-inline: 2rem;
+                    padding-top: 19rem;
+
+                    .first_description_detail {
+                        .first_description_title {
+                            font-size: 1.7rem;
+                        }
+
+                        .first_description_content {
+                            font-size: 0.7rem;
+                        }
+                    }
+                }
+            }
+
+            .second_hero_wrapper {
+                background-size: 100%;
+                background-position: center -500%;
+
+                .second_description_wrapper {
+                    margin-top: 3.3rem;
+
+                    .second_title {
+                        font-size: 1.26rem;
+                    }
+
+                    .second_content {
+                        font-size: 0.65rem;
+                    }
+                }
+
                 .illustration-phones-img {
-                    right: 0rem;
+                    top: -10rem;
+                }
+            }
+
+            .third_hero_wrapper {
+                .third_description_wrapper {
+                    padding-top: 26rem;
                 }
             }
         }
