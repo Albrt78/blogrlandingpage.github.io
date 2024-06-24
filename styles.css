@@ -391,11 +391,11 @@ body .header_wrapper .header_button_intro .button_intro_right:active {
     font-size: 1.8rem;
   }
   body .header_wrapper .header_button_intro .button_intro_left {
-    padding: 1.7rem 2.5rem;
+    padding: 1.5rem 2.5rem;
     font-size: 1.5rem;
   }
   body .header_wrapper .header_button_intro .button_intro_right {
-    padding: 1.7rem 2.5rem;
+    padding: 1.5rem 2.5rem;
     font-size: 1.5rem;
   }
 }
@@ -422,8 +422,8 @@ body .header_wrapper .header_button_intro .button_intro_right:active {
     width: auto;
     left: 5rem;
     right: 5rem;
-    top: -100%;
-    transition: all 0.5s ease-in-out;
+    top: -200%;
+    transition: all 0.3s ease-in-out;
   }
   body .header_wrapper .header__nav .sub_header_nav .header_nav_wrapper .navbar {
     display: block;
@@ -459,6 +459,11 @@ body .header_wrapper .header_button_intro .button_intro_right:active {
     color: hsl(207, 13%, 34%);
     font-size: 1.2rem;
     font-weight: 600;
+  }
+  body .header_wrapper .header__nav .sub_header_nav .header_nav_wrapper .navbar .header_dropdown_product .content ul li a:hover,
+  body .header_wrapper .header__nav .sub_header_nav .header_nav_wrapper .navbar .header_dropdown_company .content ul li a:hover,
+  body .header_wrapper .header__nav .sub_header_nav .header_nav_wrapper .navbar .header_dropdown_connect .content ul li a:hover {
+    color: hsl(208, 49%, 24%);
   }
   body .header_wrapper .header__nav .sub_header_nav .header_nav_wrapper .navbar .header_dropdown_product .content.active,
   body .header_wrapper .header__nav .sub_header_nav .header_nav_wrapper .navbar .header_dropdown_company .content.active,
@@ -570,9 +575,17 @@ body .header_wrapper .header_button_intro .button_intro_right:active {
   }
 }
 /* xs */
-@media (max-width: 475px) {
+@media (max-width: 475.98px) {
   body .header_wrapper {
     padding-inline: 2.3rem;
+  }
+  body .header_wrapper .header__nav .sub_header_nav .header_nav_wrapper .navbar {
+    padding-inline: 0;
+  }
+  body .header_wrapper .header__nav .sub_header_nav .header_nav_wrapper .navbar .header_dropdown_product .content,
+  body .header_wrapper .header__nav .sub_header_nav .header_nav_wrapper .navbar .header_dropdown_company .content,
+  body .header_wrapper .header__nav .sub_header_nav .header_nav_wrapper .navbar .header_dropdown_connect .content {
+    padding-inline: 0;
   }
   body .header_wrapper .header_intro_wrapper .header_intro {
     font-size: 2.3rem;

@@ -717,12 +717,12 @@ body {
 
             .header_button_intro {
                 .button_intro_left {
-                    padding: 1.7rem 2.5rem;
+                    padding: 1.5rem 2.5rem;
                     font-size: 1.5rem;
                 }
 
                 .button_intro_right {
-                    padding: 1.7rem 2.5rem;
+                    padding: 1.5rem 2.5rem;
                     font-size: 1.5rem;
                 }
             }
@@ -755,8 +755,8 @@ body {
                         width: auto;
                         left: 5rem;
                         right: 5rem;
-                        top: -100%;
-                        transition: all 0.5s ease-in-out;
+                        top: -200%;
+                        transition: all 0.3s ease-in-out;
 
                         .navbar {
                             display: block;
@@ -785,10 +785,15 @@ body {
                                     ul {
                                         li {
                                             margin-bottom: 1rem;
+
                                             a {
                                                 color: $Very-dark-grayish-blue;
                                                 font-size: 1.2rem;
                                                 font-weight: 600;
+
+                                                &:hover {
+                                                    color: $Very-dark-blue;
+                                                }
                                             }
                                         }
                                     }
@@ -956,10 +961,28 @@ body {
 }
 
 /* xs */
-@media (max-width: 475px) {
+@media (max-width: 475.98px) {
     body {
         .header_wrapper {
             padding-inline: 2.3rem;
+
+            .header__nav {
+                .sub_header_nav {
+                    .header_nav_wrapper {
+                        .navbar {
+                            padding-inline: 0;
+
+                            .header_dropdown_product,
+                            .header_dropdown_company,
+                            .header_dropdown_connect {
+                                .content {
+                                    padding-inline: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 
             .header_intro_wrapper {
                 .header_intro {
