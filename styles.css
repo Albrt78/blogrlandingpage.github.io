@@ -1029,6 +1029,9 @@ body .footer_wrapper .attribution a:visited {
     padding-inline: 0;
     text-align: center;
   }
+  body .footer_wrapper .attribution {
+    display: none;
+  }
 }
 /* 2xs */
 @media (max-width: 390.98px) {

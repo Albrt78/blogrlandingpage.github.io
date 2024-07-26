@@ -1425,6 +1425,10 @@ body {
         .footer_wrapper {
             padding-inline: 0;
             text-align: center;
+
+            .attribution {
+                display: none;
+            }
         }
     }
 }
