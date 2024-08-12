@@ -127,7 +127,7 @@ body .header_wrapper .header__nav .sub_header_nav .header_nav_wrapper .navbar .d
   transform-origin: left;
   transition: 0.2s linear;
 }
-body .header_wrapper .header__nav .sub_header_nav .header_nav_wrapper .navbar .dropdown_label_wrapper .dropdown_category.active::after, body .header_wrapper .header__nav .sub_header_nav .header_nav_wrapper .navbar .dropdown_label_wrapper .dropdown_category:hover::after {
+body .header_wrapper .header__nav .sub_header_nav .header_nav_wrapper .navbar .dropdown_label_wrapper .dropdown_category:hover::after {
   transform: scaleX(1);
 }
 body .header_wrapper .header__nav .sub_header_nav .header_nav_wrapper .navbar .dropdown_label_wrapper .dropdown_arrow_sign {

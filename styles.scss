@@ -164,7 +164,6 @@ body {
                                     transition: 0.2s linear;
                                 }
 
-                                &.active,
                                 &:hover {
                                     &::after {
                                         transform: scaleX(1);

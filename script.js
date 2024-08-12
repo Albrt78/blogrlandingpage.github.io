@@ -4,7 +4,7 @@ const content = document.querySelectorAll(".content");
 const hamburgerMenu = document.querySelector(".hamburger_menu");
 const closeMenu = document.querySelector(".close_menu");
 const mainMenu = document.querySelector(".header_nav_wrapper");
-
+const links = document.querySelectorAll(".nav_link");
 const menu = [hamburgerMenu, closeMenu];
 
 for (let i = 0; i < arrowText.length; i++) {
@@ -18,7 +18,7 @@ for (let i = 0; i < arrowText.length; i++) {
         arrowSign[i].classList.toggle("rotate");
     });
 
-    document.addEventListener("click", (e) => {
+    window.addEventListener("click", (e) => {
         if (
             !arrowText[i].contains(e.target) &&
             !arrowSign[i].contains(e.target)
@@ -46,3 +46,9 @@ hamburgerMenu.addEventListener("click", () => {
 closeMenu.addEventListener("click", () => {
     mainMenu.classList.remove("show_menu");
 });
+
+for (let i = 0; i < links.length; i++) {
+    links[i].addEventListener("click", (e) => {
+        e.preventDefault();
+    });
+}
