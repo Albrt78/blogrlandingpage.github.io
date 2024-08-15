@@ -1093,6 +1093,22 @@ body {
                     font-size: 1.7rem;
                 }
             }
+
+            .header_button_intro {
+                .button_intro_left {
+                    &:hover {
+                        background-color: $White;
+                        color: $Light-red;
+                    }
+                }
+
+                .button_intro_right {
+                    &:hover {
+                        background-color: transparent;
+                        color: $White;
+                    }
+                }
+            }
         }
 
         .main_wrapper {

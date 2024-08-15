@@ -812,6 +812,14 @@ body .footer_wrapper .attribution a:visited {
   body .header_wrapper .header_intro_wrapper .sub_header_intro {
     font-size: 1.7rem;
   }
+  body .header_wrapper .header_button_intro .button_intro_left:hover {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(356, 100%, 66%);
+  }
+  body .header_wrapper .header_button_intro .button_intro_right:hover {
+    background-color: transparent;
+    color: hsl(0, 0%, 100%);
+  }
   body .main_wrapper .first_hero_wrapper {
     background-position: center 42%;
     min-height: auto;
